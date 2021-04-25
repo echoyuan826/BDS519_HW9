@@ -8,7 +8,7 @@ navbar:
    - text: "Coding in Python"
      href: HW9_Blinken_vs_Hua.html
    - text: "Coding in R"
-     href: Homework_09_R.html
+     href: homework_09_R.html
    - text: "Project Explanation"
      href: project.html
 
