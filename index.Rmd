@@ -1,5 +1,5 @@
 ---
-title: "index"
+title: "Introduction"
 author: "Wenlu Yuan"
 date: "4/16/2021"
 output: html_document
@@ -10,17 +10,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-# Introduction
-
-
-## Twitter
+### Twitter
 
 Twitter is an American microblogging and social networking service on which users post and interact with messages known as "tweets"
 
 Registered users can post, like and retweet tweets, but unregistered users can only read them.
 
 
-## Celebrities and Twitter
+### Celebrities and Twitter
 
 It is a easy way to talk to celebrities, politicians, influencers and experts on Twitter, as Twitter has a clever audience which makes the Twitter chats (or interactions) much more interesting and quotable.
 
