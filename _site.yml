@@ -9,7 +9,7 @@ navbar:
      href: HW9_Blinken_vs_Hua.html
    - text: "Coding in R"
      href: Homework 09_R.html
-   - text: "Project Explanation
+   - text: "Project Explanation"
      href: project.html
 
 output:
