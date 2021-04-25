@@ -1,0 +1,18 @@
+name: "Wenlu's Website"
+output_dir: "."
+navbar:
+  title : "Wenlu Yuan's Website for BDS516 HW9"
+  left:
+   - text: "Home"
+     href: index.html
+   - text: "Coding in Python"
+     href: HW9_Blinken_vs_Hua.html
+   - text: "Coding in R"
+     href: Homework 09_R.html
+   - text: "Project Explanation
+     href: project.html
+
+output:
+  html_document:
+    theme: simplex
+    highlight: textmate
