@@ -289,7 +289,7 @@ $(document).ready(function () {
   <a href="HW9_Blinken_vs_Hua.html">Coding in Python</a>
 </li>
 <li>
-  <a href="Homework 09_R.html">Coding in R</a>
+  <a href="Homework_09_R.html">Coding in R</a>
 </li>
 <li>
   <a href="project.html">Project Explanation</a>
@@ -324,7 +324,7 @@ Hua %&gt;%
   labs(x = &quot;Hour of day (EST)&quot;, y = &quot;% of tweets&quot;, color = &quot;&quot;) + 
   scale_y_continuous(labels = percent_format()) +
   geom_line() + labs(title = &quot;What time Hua published tweets?&quot;)</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <pre class="r"><code>Blinken %&gt;%
   count(hour = hour(with_tz(created_at, &quot;EST&quot;))) %&gt;%
   mutate(percent = n/sum(n)) %&gt;%
@@ -332,7 +332,7 @@ Hua %&gt;%
   labs(x = &quot;Hour of day (EST)&quot;, y = &quot;% of tweets&quot;, color = &quot;&quot;) + 
   scale_y_continuous(labels = percent_format()) +
   geom_line() + labs(title = &quot;What time Blinken published tweets?&quot;)</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
 <p>Then, we can look at how many of the tweets have pictures or links for Blinken and Hua. Hua has almost 6 times more tweets than Blinken (this is because she joined 2 years earlier than Blinken.) From the graphs, we can see that Hua tends to tweet with picture or link more than Blinken but tweets with picture or link are in the minority for both of them.</p>
 <pre class="r"><code>#  Count the number of tweets with and without picture/links 
 tweet_picture_counts_Hua &lt;- Hua %&gt;%
@@ -349,11 +349,11 @@ tweet_picture_counts_Blinken &lt;- Blinken %&gt;%
 ggplot(tweet_picture_counts_Hua, aes(x = picture, y = n)) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
   labs(x = &quot;&quot;, y = &quot;Number of tweets&quot;, fill = &quot;&quot;) + labs(title = &quot;The number of tweets with and without picture/links (Hua)&quot;)</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(tweet_picture_counts_Blinken, aes(x = picture, y = n)) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;) +
   labs(x = &quot;&quot;, y = &quot;Number of tweets&quot;, fill = &quot;&quot;)+ labs(title = &quot;The number of tweets with and without picture/links (Blinken)&quot;)</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
 </div>
 <div id="most-commonly-used-words-and-word-clouds" class="section level2">
 <h2>Most commonly used words and word clouds</h2>
@@ -390,7 +390,7 @@ tweet_words_Hua %&gt;%
   geom_bar(stat = &quot;identity&quot;) +
   ylab(&quot;Occurrences&quot;) +
   coord_flip() + labs(title = &quot;Most common words of Hua&quot;)</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <pre class="r"><code>tweet_words_Blinken %&gt;%
   count(word, sort = TRUE) %&gt;%
   head(20) %&gt;%
@@ -399,7 +399,7 @@ tweet_words_Hua %&gt;%
   geom_bar(stat = &quot;identity&quot;) +
   ylab(&quot;Occurrences&quot;) +
   coord_flip()+ labs(title = &quot;Most common words of Blinken&quot;)</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-3-2.png" width="672" /></p>
 </div>
 <div id="word-clouds" class="section level3">
 <h3>Word clouds</h3>
@@ -438,7 +438,7 @@ set.seed(1234)
 wordcloud(words = d$word, freq = d$freq, min.freq = 1,
           max.words=200, random.order=FALSE, rot.per=0.35, 
           colors=brewer.pal(50, &quot;Dark2&quot;))</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
 <div id="blinken-word-cloud" class="section level3">
 <h3>Blinken Word Cloud:</h3>
@@ -471,7 +471,7 @@ set.seed(1234)
 wordcloud(words = d$word, freq = d$freq, min.freq = 1,
           max.words=200, random.order=FALSE, rot.per=0.35, 
           colors=brewer.pal(50, &quot;Dark2&quot;))</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 </div>
 <div id="sentiment-analysis" class="section level2">
@@ -496,13 +496,13 @@ ggplot(Hua_sentiment, aes(x = word, y = n, fill = sentiment)) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;, width = 0.9) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme (plot.title = element_text(hjust = 0.5)) +
   labs(x = &quot;Top 40 words used in Twitter&quot;, y = &quot;Count of each word&quot;, title = &quot;Top 40 words used in Hua&#39;s tweets by sentiment&quot;) </code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <pre class="r"><code>ggplot(Blinken_sentiment, aes(x = word, y = n, fill = sentiment)) +
   facet_grid(~ sentiment, scales = &quot;free&quot;, space=&quot;free_x&quot;) +
   geom_bar(stat = &quot;identity&quot;, position = &quot;dodge&quot;, width = 0.9) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   labs(x = &quot;Top 40 words used in Twitter&quot;, y = &quot;Count of each word&quot;, title = &quot;Top 40 words used in Blinken&#39;s tweets by sentiment&quot;)</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
 </div>
 <div id="how-likely-is-a-certain-commonly-used-word-used-by-hua-or-blinken" class="section level3">
 <h3>How likely is a certain commonly used word used by Hua or Blinken?</h3>
@@ -538,7 +538,7 @@ Hua_Blinken_ratios %&gt;%
   ylab(&quot;Hua / Blinken log ratio&quot;) +
   scale_fill_manual(name = &quot;&quot;, labels = c(&quot;Hua&quot;, &quot;Blinken&quot;, title = &quot;How likely is a word coming from Blinken or Hua by sentiments (top 20 words)?&quot;),
   values = c(&quot;red&quot;, &quot;lightblue&quot;))</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <pre class="r"><code>#look at sentiments and predict whether a tweet is from Hua or Blinken
 Hua_Blinken_sentiment &lt;- Hua_Blinken_ratios %&gt;%
   inner_join(nrc, by = &quot;word&quot;) %&gt;%
@@ -557,7 +557,7 @@ ggplot(Hua_Blinken_sentiment, aes(x = word, y = logratio, fill = logratio &lt; 0
   labs(x = &quot;&quot;, y = &quot;Hua / Blinken log ratio&quot;, title = &quot;How likely is a word coming from Blinken or Hua (by sentiments)?&quot;) +
   scale_fill_manual(name = &quot;&quot;, labels = c(&quot;Hua&quot;, &quot;Blinken&quot;),
                     values = c(&quot;red&quot;, &quot;lightblue&quot;))</code></pre>
-<p><img src="Homework-09_R_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
+<p><img src="homework_09_R_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
 </div>
 </div>
 
